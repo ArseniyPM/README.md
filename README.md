@@ -103,7 +103,7 @@ graph TD
     F -- Нет --> H{D % X<minimum}
     G --> H
     H -- Да --> I[minimum=D % X <br/> counter=D]
-    H -- Нет --> J[/Вывод:couner/]
+    H -- Нет --> J[/Вывод:counter/]
     I --> J
     J --> K([Конец])
 
@@ -111,7 +111,8 @@ graph TD
 
 ### 5. Программа
 
-```import java.io.PrintStream;
+```
+import java.io.PrintStream;
 import java.util.Scanner;
 public class Main {
     // Объявляем объект класса Scanner для ввода данных
