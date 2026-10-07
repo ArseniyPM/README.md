@@ -111,39 +111,42 @@ graph TD
 
 ### 5. Программа
 
-```java
-import java.io.PrintStream;
+```import java.io.PrintStream;
 import java.util.Scanner;
-
 public class Main {
     // Объявляем объект класса Scanner для ввода данных
     public static Scanner in = new Scanner(System.in);
     // Объявляем объект класса PrintStream для вывода данных
     public static PrintStream out = System.out;
-
     public static void main(String[] args) {
-        // Считывание двух вещественных чисел x и y из консоли
-        double x = in.nextDouble();
-        double y = in.nextDouble();
-
-        // Определение максимального числа
-        if (x >= y) {
-            // Если x положительное, выводим x, иначе выводим -x,
-            // чтобы на выходе было его абсолютное значение
-            if (x >= 0) {
-                out.println(x);
-            } else {
-                out.println(-x);
-            }
-        } else {
-            // Если x положительное, выводим y, иначе выводим -y,
-            // чтобы на выходе было его абсолютное значение
-            if (y >= 0) {
-                out.println(y);
-            } else {
-                out.println(-y);
-            }
+        // Считываем натуральное число X
+        int X =in.nextInt();
+        // Считываем четыре целых числа A,B,C,D
+        int A =in.nextInt();
+        int B =in.nextInt();
+        int C =in.nextInt();
+        int D =in.nextInt();
+        // допустим остаток деления на X числа A минимальный
+        int minimum = A%X;
+        // counter - число ,которому соответствует текущий минимум остатка
+        int counter = A;
+        // Проверяем число B,если его остаток меньше текущего минимума, то обновляем минимум и запоминаем соответствующее число,иначе идем дальше
+        if (minimum>B%X){
+            minimum=B%X;
+            counter=B;
         }
+        // Проверяем число C,если его остаток меньше текущего минимума, то обновляем минимум и запоминаем соответствующее число,иначе идем дальше
+        if (minimum>C%X){
+            minimum=C%X;
+            counter=C;
+        }
+        // Проверяем число D,если его остаток меньше текущего минимума, то обновляем минимум и запоминаем соответствующее число.
+        if (minimum>D%X){
+            minimum=D%X;
+            counter=D;
+        }
+        // Выводим число ,имеющее наименьший остаток от деления на X
+        out.println(counter);
     }
 }
 ```
