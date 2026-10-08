@@ -91,23 +91,7 @@
 
 #### Блок-схема
 
-```mermaid
-graph TD
-    A([Начало]) --> B[/Ввести: X,A,B,C,D/]
-    B --> C[minimum=A % X<br/> counter=A]
-    C --> D{B % X < minimum}
-    D -- Да --> E[minimum=B % X <br/> counter=B]
-    D -- Нет --> F{C % X<minimum}
-    E --> F
-    F -- Да --> G[minimum=C % X <br/> counter=C]
-    F -- Нет --> H{D % X<minimum}
-    G --> H
-    H -- Да --> I[minimum=D % X <br/> counter=D]
-    H -- Нет --> J[/Вывод:counter/]
-    I --> J
-    J --> K([Конец])
 
-```
 
 ### 5. Программа
 
