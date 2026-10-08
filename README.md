@@ -96,7 +96,7 @@ graph TD
     B --> C[minimum=A % X<br/> counter=A]
     C --> D{B % X < minimum}
     D -- Да --> E[minimum=B % X <br/> counter=B]
-    D -- Нет --> F{C % X< minimum}
+    D -- Нет --> F{C % X < minimum}
     E --> F
     F -- Да --> G[minimum=C % X <br/> counter=C]
     F -- Нет --> H{D % X < minimum}
